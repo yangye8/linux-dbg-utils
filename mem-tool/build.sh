@@ -1,0 +1,1 @@
+make `basename -s .c *`
