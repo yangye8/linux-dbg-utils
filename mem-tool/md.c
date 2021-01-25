@@ -384,16 +384,7 @@ int main(int argc, char **argv)
 	char *file = "/dev/mem";
 	int swap = 0;
 
-	if (!strcmp(basename(argv[0]), "md")) {
-		argv++;
-		argc--;
-
-		if (argc > 0 && !strcmp(argv[0], "-V")) {
-			return EXIT_SUCCESS;
-		}
-	}
-
-	if (argc < 1) {
+	if (argc < 2) {
 		fprintf(stderr, "No physical address given\n");
 		usage_md();
 		return EXIT_FAILURE;
